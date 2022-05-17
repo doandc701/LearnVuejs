@@ -1,0 +1,10 @@
+cách cài đặt 
+VueInstance là gì ? 
+data & method
+
+data binding : ràng buộc dữ liệu 
+    Atribute: + v-bind:
+Javascript expression : sử dụng biểu thức  
+
+{{}}: chỉ sử dụng được một số biểu thức đơn giản :cộng , trừ , toán tử 3 ngôi ,
+Không sử dụng được với hàm, khai báo biến , câu lệnh if-else

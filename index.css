@@ -1,0 +1,15 @@
+.box{
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(37, 196, 205);
+    position: relative;
+}
+.box-2{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: gray;
+}

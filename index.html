@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script> -->
+</head>
+
+<body>
+    <header><h1>Hello VueJS</h1></header>
+    <div id="app">
+        <p>{{ title }}</p>
+        <h2>{{ say('Đoàn') }}</h2>
+
+        <!--  -->
+        <div class="product">
+            <div class="product-content">
+                <h3 class="title">
+                    <!--rút gọn v-bind => :bind -->
+                    <a v-bind:href="url">{{ name }}</a>
+                </h3>
+                <div class="price"> {{ formatPrice() }}</div>
+                <h4>{{ check ? "Đây là web đang làm VUEJS" : "ReactJS"}}</h4>
+            </div>
+
+        </div>
+        <!-- event -->
+        <b>Count: {{ counter }}</b>
+        <button v-on:click="handleClick($event,5)">Click Me</button>
+        <!-- onmouseMove -->
+        <div class="box" v-on:mousemove="handleMouseMove">
+            <p>clientX: {{ clientX }}</p>
+            <p>clientY: {{ clientY }}</p>
+            
+            <!-- sử dụng event Modifiers (stop , prevent    ) -->
+            <div class="box-2" v-on:mousemove.stop="handleMouseMoveChild"></div>
+        </div>
+
+        <!-- ngăn chặn sự mặc định của trang  -->
+        <form action="./sever.php" v-on:submit.prevent="handleForm">
+            <label for="tendangnhap">Tên Đăng Nhập: </label>
+            <input type="text" name="tendangnhap"/> <br/>
+            <label for="password">Password: </label>
+            <input type="password" name="password" /> <br/>
+            <input type="submit" value="Login">
+        </form>
+        <!-- template syntax -->
+    </div>
+    <footer>
+        <h1>Footer</h1>
+    </footer>
+</body>
+    <script src="./index.js"></script>
+</html>
