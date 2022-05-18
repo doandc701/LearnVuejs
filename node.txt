@@ -2,9 +2,13 @@ cách cài đặt
 VueInstance là gì ? 
 data & method
 
-data binding : ràng buộc dữ liệu 
+data binding : ràng buộc dữ liệu ; v-model
     Atribute: + v-bind:
 Javascript expression : sử dụng biểu thức  
 
 {{}}: chỉ sử dụng được một số biểu thức đơn giản :cộng , trừ , toán tử 3 ngôi ,
 Không sử dụng được với hàm, khai báo biến , câu lệnh if-else
+
+Sự khác nhau giữ : v-if-else với v-show
++ v-if-else thì sẽ xóa các phần tử khi mà không dùng đến 
++ v-show chỉ đơn giản là ẩn đi về mặt giao diện người dùng , trong source code vẫn còn 

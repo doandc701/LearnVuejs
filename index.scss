@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*  */
+.tabs{
+    margin-top: 10px;
+ }
+ .tabs li{
+    cursor: pointer;
+     display: inline-block;
+     padding: 10px 10px;
+     border: 1px solid orangered;
+
+     &:hover{
+         background-color: darkorange;
+     }
+ }
+ .form{
+     margin-top: 10px;
+
+   
+     form{
+        padding: 20px 15px;
+        border: 1px solid darkorchid;
+     }
+     &-group{
+         margin-top: 10px;
+    }   
+    input{
+        height: 30px;
+        margin-bottom: 10px;
+    }
+ }
+ 
+ 
+  
+
+
+.news{
+    display: flex;
+    flex-wrap: wrap;
+
+    &-list{
+        width: 22%;
+        margin: 10px 15px;
+        padding: 10px 10px;
+        border: 1px solid orange;
+    }
+    .title{
+        font-size: 18px;
+        font-weight: 700;
+        color: #333;
+    }
+}

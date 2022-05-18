@@ -10,12 +10,13 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script> -->
 </head>
 
+
 <body>
     <header><h1>Hello VueJS</h1></header>
     <div id="app">
         <p>{{ title }}</p>
         <h2>{{ say('Đoàn') }}</h2>
-
+       
         <!--  -->
         <div class="product">
             <div class="product-content">
@@ -30,7 +31,7 @@
         </div>
         <!-- event -->
         <b>Count: {{ counter }}</b>
-        <button v-on:click="handleClick($event,5)">Click Me</button>
+        <button v-on:click="handleClick($event,5)" :disabled="isDisable">Click Me</button>
         <!-- onmouseMove -->
         <div class="box" v-on:mousemove="handleMouseMove">
             <p>clientX: {{ clientX }}</p>
@@ -48,6 +49,28 @@
             <input type="password" name="password" /> <br/>
             <input type="submit" value="Login">
         </form>
+        <hr/>
+        <!-- computed -->
+        <h1>{{ reversedMessage }}</h1>
+
+        <button v-on:click="a++">A = A + 1 </button>
+        <button v-on:click="b++">B = B + 1 </button>
+        <p>A = {{ addA }}</p>
+        <p>B = {{ addB }}</p>
+        
+        <hr/>
+        <!-- Ràng buộc dữ liệu 2 chiều  -->
+        <!-- v-model sẽ thay thế cho logic viết hàm thay đổi khi người dùng nhập vào và gán giá trị cho nó -->
+        <input type="text" v-model="firstName">
+        <i>Show: {{ firstName }}</i>
+
+        <hr/>
+        <!-- ràng buôc Class and Style -->
+        <button v-on:click="handleChangeActive">Change Active</button>
+        <button v-on:click="handleChangeError">Change Error</button>
+        <div class="demo" v-bind:class="objClass"></div>
+
+        <div class="background" v-bind:style="objStyle"></div>
         <!-- template syntax -->
     </div>
     <footer>

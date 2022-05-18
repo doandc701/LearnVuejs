@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<body>
+    <!-- bắt đầu từ V-IF -ELSE  -->
+    <div id="app">
+        <ul class="tabs">
+            <li v-on:click="changTabs('login')">Sign In</li>
+            <li v-on:click="changTabs('register')">Sign Up</li>
+
+            <div class="form" v-if="tabSelected === 'login'">
+                <form action="">
+                    <h2>Sign In</h2>
+                    <div class="form-group">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password"><br/>
+                        <input type="submit" value="Login">
+                    </div>
+                </form>
+            </div>
+
+            <div class="form" v-else-if="tabSelected === 'register'">
+                <form action="">
+                    <h2>Sign Up</h2>
+                    <div class="form-group">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Enter the password"><br/>
+                        <input type="submit" value="Login">
+                    </div>
+                </form>
+            </div>
+        </ul>
+
+        <div class="news">
+            <div class="news-list" v-for="(item, index) in listApi" v-bind:key="index">
+                    <div class="title">{{ item.title }}</div>
+                    <div class="description">{{ item.description }}</div>
+            </div>
+        </div>
+
+        <!-- vòng lập dữ liệu  -->
+    </div>
+    <script src="./index2.js"></script>
+</body>
+</html>
